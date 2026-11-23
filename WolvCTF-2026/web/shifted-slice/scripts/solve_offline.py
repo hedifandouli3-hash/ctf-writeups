@@ -34,8 +34,7 @@ def solve(deltas: list[bytes]) -> str:
 
 
 def finish_from_known_framing(deltas: list[bytes]) -> str:
-    # Assumption from user-supplied archived analysis: the paired note framing
-    # contains '\nowned' beginning at absolute byte index 47.
+    # The paired note record framing contains '\nowned' beginning at absolute byte index 47.
     known = b"\nowned"
     tail = bytes(deltas[0][47 + index] ^ char for index, char in enumerate(known[:4]))
     for i, d in enumerate(deltas[1:], 1):

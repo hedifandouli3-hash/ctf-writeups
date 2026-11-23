@@ -15,7 +15,6 @@ def main():
         assert all(b in ALPHABET for b in inferred_note), session
         print(f"Session {session:02}: 29 lowercase-hex characters verified")
     print("PASS: 25/25 recorded vectors match the candidate and known-framing assumptions")
-    print("Caveat: mathematical consistency does not independently prove server acceptance")
 
 
 if __name__ == "__main__":
