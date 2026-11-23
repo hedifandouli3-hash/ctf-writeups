@@ -29,14 +29,10 @@ All reproduction scripts and vectors are included in this repository and can be 
 ```text
 shifted-slice/
 ├── README.md                      # Technical write-up
-├── Shifted_Slice_Writeup.pdf      # PDF version of write-up
-├── build_pdf.py                   # Script to build PDF
-├── make_diagram.py                # Diagram generator
 ├── data/
 │   └── deltas.txt                 # 25 captured 64-byte XOR delta vectors
 ├── images/
-│   ├── challenge_tile_original.png
-│   └── layout_comparison.png
+│   └── challenge_tile_original.png
 └── scripts/
     ├── inspect_layout.py          # Compute bundle layout transitions
     ├── solve_offline.py           # Derive candidate flag from deltas
@@ -114,10 +110,6 @@ By removing `p-public` and introducing two public records (`a-pub` of 48 bytes, 
 | **Total** | | **304** | |
 
 Notice that the total bundle length remains **304 bytes**, but the slice occupying bytes **112–175** is now `m-sealed` instead of `z-owned`.
-
-![Layout comparison](images/layout_comparison.png)
-
-*Figure 2. Comparison between initial Revision 0 layout and modified layout. The ticket interval 112–175 now overlays m-sealed.*
 
 ---
 
